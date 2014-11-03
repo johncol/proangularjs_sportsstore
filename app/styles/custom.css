@@ -1,0 +1,72 @@
+.row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.title a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.product-container,
+.category-container {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.site-title {
+	cursor: pointer;
+}
+
+body {
+	overflow-y: scroll;
+}
+
+a[ng-click] {
+	cursor: pointer;
+}
+
+/* --------------------------------- Cart Summary Styles -------- */
+
+.navbar-right {
+	float: right;
+	margin-right: 5px;
+}
+
+.navbar-text {
+	margin-right: 10px;
+}
+
+.checkout-btn {
+	margin-right: 10px;
+}
+
+.add-to-cart-btn {
+	margin-top: 10px;
+}
+
+/* --------------------------------- Header Styles -------- */
+
+header {
+	margin-bottom: 15px;
+}
+
+/* --------------------------------- Footer Styles -------- */
+
+footer {
+	margin-top: 30px;
+}
+
+/* --------------------------------- Form Styles -------- */
+
+input.ng-invalid.ng-dirty {
+	background-color: rgb(255, 253, 253);
+}
+
+input.ng-valid.ng-dirty {
+	background-color: rgb(248, 252, 248);
+}
+
+span.error {
+	color: #CC2727;
+}

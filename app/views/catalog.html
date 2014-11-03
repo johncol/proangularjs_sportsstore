@@ -1,0 +1,42 @@
+
+<section class="panel panel-default row">
+
+	<sidebar class="col-xs-3 category-container">
+		<a class="btn btn-block btn-default btn-sm" 
+			ng-class="getActiveItemClass()" 
+			ng-click="selectCategory()">
+				All
+		</a>
+		<a class="btn btn-block btn-default btn-sm" 
+			ng-class="getActiveItemClass(item)" 
+			ng-click="selectCategory(item)" 
+			ng-repeat="item in products | orderBy:'category' | unique:'category'">
+				{{item}}
+		</a>
+	</sidebar>
+
+	<section class="col-xs-9 product-container">
+
+		<div class="well" ng-repeat="item in products | filter:productsByCategory | range:selectedPage:itemsPerPage">
+			<h4>
+				<strong>{{item.name}}</strong>
+				<span class="pull-right label label-primary">{{item.price | currency}}</span>
+			</h4>
+			<span>{{item.description}}</span><br>
+			<button class="btn btn-success btn-xs pull-right add-to-cart-btn" ng-click="addProductToCart(item)">Add to Cart</button>
+			<br>
+		</div>
+
+
+		<div class="pull-right btn-group">
+			<a class="btn btn-default btn-sm"
+				ng-class="getActivePageClass(page + 1)"
+				ng-repeat="page in data.products | filter:productsByCategory | pageCount:itemsPerPage"
+				ng-click="selectPage(page + 1)">
+					{{page + 1}}
+			</a>
+		</div>
+
+	</section>
+
+</section>

@@ -1,0 +1,14 @@
+
+<div class="alert alert-danger" ng-show="data.orderError">
+	Error {{data.orderError.status}}. {{data.orderError.message}}. The order could not be placed.
+	<a class="alert-link" href="#placeorder">Click here to try again</a>
+</div>
+
+<div class="alert alert-success" ng-hide="data.orderError">
+	<h3>Thanks!</h3>
+	<p>
+		Thanks for placing your order. We'll ship your goods as soon as possible.
+		If you need to contact us, use reference {{data.orderId}}.
+		<br><a class="alert-link" href="#catalog">Return to catalog</a>
+	</p>
+</div>
